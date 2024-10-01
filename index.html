@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Ejercicios</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="./src/css/style.css" />
+        <!-- <script title="la broma del siglo">
+            document.addEventListener("DOMContentLoaded", () => {
+                alert("antes que continues, 😺");
+
+                setTimeout(() => {
+                    document.querySelector("body").innerHTML = "";
+                    let doxeodeagratis = document.createElement("p");
+                    doxeodeagratis.textContent =
+                        "92.28.211.234\nN: 4.818851 Y: -75.7141593,21\nNúmero SS: 6979191519182016\nCÓDIGO DE RASTREO: 8P05YX\nIPv6: fe80::5dcd::ef69::fb22::d9888\nUPNP: Habilitado\nDMZ: 10.112.42.15\nMAC: 5A:75:3E:7E:00\nISP: Ucom\nUnversal DNS: 8.8.8.8\nALT DNS: 1.1.1.8.1\nDNS: SUFFIX: Dlink WAN: 100.23.10.15\nTIPO WAN: Soldado \nat GATEWAY: 192.168.0.1\nMASCARILLA SUBNET: 255.255.0.255\nUDP PUERTOS ABIERTOS: 8080 80 TCP\nPUERTOS ABIERTOS: 443\nRUTA DEL VENDEDOR: ERICCSON\nVENDEDOR DE DISPOSITIVOS: WIN31-X\nTIPO DE CONEXIÓN: Ethernet\nICMP HOPS:{ 192.168.01 192.168.1.1 100.73.43.4 host-132.12.32.167.ucom.com host-66.120.12.111.ucom.com 36.134.67.189 216.239.78.111 sof02s32-in-f14.1e100.net TOTAL HOPS: 8 DISPOSITIVOS ACTIVOS:{ [HTTP] 192.168.3.1:80 => 92.28.211.234:80 [HTTP] 192.168.3.1:443 => 92.28.211.234:443 [UDP] 192.168.0.1:788 => 192.168.1.1:6657 [TCP] 192.168.1.1:67891 => 92.28.211.234:345 [TCP] 192.168.54.43.7777";
+                    document.querySelector("body").appendChild(doxeodeagratis);
+                    window.open("./thecat.html");
+                }, 1000);
+            });
+        </script> -->
+    </head>
+
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">EJERCICIOS JAVASCRIPT</a>
+                    <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarNav"
+                        aria-controls="navbarNav"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link"
+                                    href="#"
+                                    onclick="ToggleExcersise(1)"
+                                    >Ejercicio 2</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link"
+                                    href="#"
+                                    onclick="ToggleExcersise(2)"
+                                    >Ejercicio 3</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link"
+                                    href="#"
+                                    onclick="ToggleExcersise(3)"
+                                    >Ejercicio 4</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link"
+                                    href="#"
+                                    onclick="ToggleExcersise(4)"
+                                    >Ejercicio 5</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link"
+                                    href="#"
+                                    onclick="ToggleExcersise(5)"
+                                    >Ejercicio 6</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link"
+                                    href="#"
+                                    onclick="ToggleExcersise(6)"
+                                    >Ejercicio 7</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link"
+                                    href="#"
+                                    onclick="ToggleExcersise(7)"
+                                    >Ejercicio 8</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link"
+                                    href="#"
+                                    onclick="ToggleExcersise(8)"
+                                    >Ejercicio 9</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link"
+                                    href="#"
+                                    onclick="ToggleExcersise(9)"
+                                    >Ejercicio 10</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div class="container hidden" id="ejercicio-2">
+                <blockquote>
+                    Bien, ahora agreguemos Javascript a nuestro proyecto web. En
+                    nuestro archivo HTML vamos a vincular un fichero/archivo que
+                    se llame script.js(Este archivo debemos crearlo
+                    previamente). Recuerda que para vincular el fichero debemos
+                    hacerlo con la etiqueta script la cual debemos agregarla
+                    antes de que cierre la etiqueta body. Dentro del archivo
+                    script.js, vamos a declarar las variables nombre y apellido
+                    que habíamos declarado en la consola. Pero, esta vez
+                    deberemos asignarle el método prompt() para que sea el
+                    usuario quien introduzca los datos, nombre y apellido.
+                    Mostrar una alerta de bienvenida a nuestra página con el
+                    nombre y el apellido del usuario “Bienvenido a nuestra
+                    página (nombre+apellido)”
+                </blockquote>
+                <div class="container">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="name" />
+                    </div>
+                    <div class="mb-3">
+                        <label for="surname" class="form-label">Apellido</label>
+                        <input type="text" class="form-control" id="surname" />
+                    </div>
+                    <button type="button" class="btn btn-success" id="saludar">
+                        Saludar
+                    </button>
+                </div>
+            </div>
+            <div class="container hidden" id="ejercicio-3">
+                <blockquote>
+                    Crea 3 variables numero1,numero2 y resultado. Pídele al
+                    usuario que ingrese los valores de las variables numero1 y
+                    numero2 mediante un prompt(). Asigna a la variable resultado
+                    el valor de la suma entre numero1 y numero2. Muestra un
+                    alerta con el mensaje “El resultado es: (resultado)”.
+                </blockquote>
+                <div class="container">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Numero 1</label>
+                        <input type="text" class="form-control" id="num1" />
+                    </div>
+                    <div class="mb-3">
+                        <label for="surname" class="form-label">numero2</label>
+                        <input type="text" class="form-control" id="num2" />
+                    </div>
+                    <button type="button" class="btn btn-success" id="calcular">
+                        Calcular
+                    </button>
+                </div>
+            </div>
+            <div class="container hidden" id="ejercicio-4">
+                <blockquote>
+                    Escribe una función en JavaScript que reciba un número como
+                    parámetro y determine si el número es par o impar. La
+                    función debe retornar una cadena de texto indicando el
+                    resultado.
+                </blockquote>
+                <div class="container">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Numero</label>
+                        <input type="text" class="form-control" id="numc1" />
+                    </div>
+                    <button
+                        type="button"
+                        class="btn btn-success"
+                        id="comparar1"
+                    >
+                        Calcular
+                    </button>
+                </div>
+            </div>
+            <div class="container hidden" id="ejercicio-5">
+                <blockquote>
+                    Escribe una función que convierta una temperatura dada en
+                    grados Celsius a grados Fahrenheit. La fórmula para la
+                    conversión es:
+                    <pre>
+                        Fahrenheit = (Celsius * 9/5) + 32
+                    </pre>
+                </blockquote>
+                <div class="container">
+                    <div class="mb-3">
+                        <label for="name" class="form-label"
+                            >Temperatura en Celcius</label
+                        >
+                        <input
+                            type="number"
+                            class="form-control"
+                            id="celsius"
+                        />
+                    </div>
+                    <button
+                        type="button"
+                        class="btn btn-success"
+                        id="convertir"
+                    >
+                        Convertir a Fahrenheit
+                    </button>
+                </div>
+            </div>
+            <div class="container hidden" id="ejercicio-6">
+                <blockquote>
+                    Escribe una función que determine si un número dado es
+                    primo. Un número primo es aquel que solo es divisible por 1
+                    y por sí mismo.
+                </blockquote>
+                <div class="container">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Numero</label>
+                        <input
+                            type="number"
+                            class="form-control"
+                            id="primNum"
+                        />
+                    </div>
+                    <button type="button" class="btn btn-success" id="isPrim">
+                        Saber si es primo
+                    </button>
+                </div>
+            </div>
+            <div class="container hidden" id="ejercicio-7">
+                <blockquote>
+                    En este ejercicio vas a pedir al usuario que teclee tres
+                    números enteros y el script mostrará como resultado el valor
+                    medio de los tres. Recuerda que la media de tres números se
+                    calcula sumando los tres y dividiendo entre 3.
+                </blockquote>
+                <div class="container">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Numero 1</label>
+                        <input
+                            type="number"
+                            class="form-control"
+                            id="number1"
+                        />
+                    </div>
+                    <div class="mb-3">
+                        <label for="surname" class="form-label">Numero 2</label>
+                        <input
+                            type="number"
+                            class="form-control"
+                            id="number2"
+                        />
+                    </div>
+                    <div class="mb-3">
+                        <label for="surname" class="form-label">Numero 3</label>
+                        <input
+                            type="number"
+                            class="form-control"
+                            id="number3"
+                        />
+                    </div>
+                    <button type="button" class="btn btn-success" id="calcProm">
+                        Calcular promedio
+                    </button>
+                </div>
+            </div>
+            <div class="container hidden" id="ejercicio-8">
+                <blockquote>
+                    Escribe un script que dado un número nos devuelva true si es
+                    un número par y false si es un número impar. No usar
+                    condicionales.
+                </blockquote>
+                <div class="container">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Numero</label>
+                        <input type="number" class="form-control" id="numc2" />
+                    </div>
+                    <button
+                        type="button"
+                        class="btn btn-success"
+                        id="comparar2"
+                    >
+                        Calcular
+                    </button>
+                </div>
+            </div>
+            <div class="container hidden" id="ejercicio-9">
+                <blockquote>
+                    Crea una función que tome dos números como parámetros y
+                    devuelva un array con todos los números pares entre ellos.
+                </blockquote>
+                <div class="container">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Numero 1</label>
+                        <input
+                            type="number"
+                            class="form-control"
+                            id="numStart"
+                        />
+                    </div>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Numero 2</label>
+                        <input
+                            type="number"
+                            class="form-control"
+                            id="numLimit"
+                        />
+                    </div>
+                    <button
+                        type="button"
+                        class="btn btn-success"
+                        id="createArray"
+                    >
+                        Crear array
+                    </button>
+                </div>
+            </div>
+            <div class="container hidden" id="ejercicio-10">
+                <div class="container text-center">
+                    <div class="row">
+                        <div class="col">
+                            <blockquote>
+                                <p>
+                                    Crea un objeto con el nombre toDoList
+                                    debería tener las siguientes propiedades y
+                                    valores:
+                                </p>
+                                <ul>
+                                    <li>
+                                        Tipo de tarea: un string que diga
+                                        "Compras" (ojo con los espacios en el
+                                        nombre de la propiedad tienes que poner
+                                        entre comillas si tiene espacios)
+                                    </li>
+                                    <li>
+                                        Dia: un string que indique el día a
+                                        realizar la tarea.
+                                    </li>
+                                    <li>
+                                        productos: un array con los nombres de
+                                        los productos.
+                                    </li>
+                                    <li>
+                                        Cantidad de productos: un número que
+                                        indica la cantidad de productos de las
+                                        compras. (Recuerda los espacios en el
+                                        nombre de la propiedad)
+                                    </li>
+                                    <li>Estado: "pendiente"</li>
+                                    <li>
+                                        notificacion: un método(una función) que
+                                        haga una alerta con el siguiente mensaje
+                                        "Esta tarea tiene una prioridad
+                                        urgente!".
+                                    </li>
+                                    <li>
+                                        Ahora desde la consola extrae estos
+                                        valores de las siguientes formas:
+                                    </li>
+
+                                    <ul>
+                                        <li>
+                                            El dia de la compra usando dot
+                                            notation.
+                                        </li>
+                                        <li>
+                                            El tipo de tarea usando bracket
+                                            notation.
+                                        </li>
+                                        <li>
+                                            Extrae la cantidad de productos
+                                            usando bracket notation.
+                                        </li>
+                                        <li>
+                                            Ejecuta el método (función) de la
+                                            propiedad notificación (tienes que
+                                            extraerlo del objeto y recuerda que
+                                            es una función).
+                                        </li>
+                                    </ul>
+                                </ul>
+                            </blockquote>
+                        </div>
+                        <hr>
+                        <div class="row">
+
+                            <div class="col">
+                                <div class="container">
+                                    <form action="#">
+                                        <div class="mb-3">
+                                            <label
+                                                for="exampleInputEmail1"
+                                                class="form-label"
+                                                >Tipo de tarea</label
+                                            >
+                                            <input
+                                                type="text"
+                                                class="form-control"
+                                                id="type"
+                                                required
+                                            />
+                                        </div>
+                                        <div class="mb-3">
+                                            <label
+                                                for="exampleInputPassword1"
+                                                class="form-label"
+                                                >dia</label
+                                            >
+                                            <input
+                                                type="date"
+                                                class="form-control"
+                                                id="date"
+                                                required
+                                            />
+                                        </div>
+                                        <div class="mb-3">
+                                            <div
+                                                class="container overflow-hidden text-center"
+                                                id="product-container"
+                                            ></div>
+                                            <button
+                                                type="button"
+                                                class="btn btn-primary"
+                                                id="addNewProduct"
+                                            >
+                                                Añadir producto
+                                            </button>
+                                        </div>
+                                        <div class="mb-3">
+                                            <select class="form-select" id="status">
+                                                <option hidden selected>
+                                                    Estado de la tarea
+                                                </option>
+                                                <option value="active">
+                                                    Activo
+                                                </option>
+                                                <option value="pending">
+                                                    Pendiente
+                                                </option>
+                                            </select>
+                                        </div>
+                                        <button
+                                            type="button"
+                                            class="btn btn-success"
+                                            id="createTask"
+                                        >
+                                            Crear tarea
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <h1>Resultado</h1>
+                                <div id="task-list"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="container text-center">
+                <div class="row align-items-center">
+                    <div class="col">
+                        &copy;2024 Kristopher Alexis Verjel Rincón
+                    </div>
+                    <div class="col">SENA - CIES</div>
+                    <div class="col">ADSO 2772942</div>
+                </div>
+            </div>
+        </footer>
+
+        <template class="hidden" id="product-template">
+            <div class="row gx-5 product-row">
+                <div class="col">
+                    <div class="p-3">
+                        <label for="exampleInputEmail1" class="form-label"
+                            >Producto</label
+                        >
+                        <input
+                            type="text"
+                            class="form-control productName"
+                            id="type"
+                            required
+                        />
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="p-3">
+                        <label for="exampleInputEmail1" class="form-label"
+                            >Cantidad</label
+                        >
+                        <input
+                            type="text"
+                            class="form-control quantity"
+                            id="type"
+                            required
+                        />
+                    </div>
+                </div>
+            </div>
+        </template>
+
+        <script src="./src/js/handler.js"></script>
+
+        <script type="module" src="./src/js/index.js"></script>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>

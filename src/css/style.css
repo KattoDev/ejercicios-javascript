@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+}
+
+body {
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: auto 1fr auto;
+}
+
+footer {
+    padding: 20px;
+}
+
+
+.hidden {
+    display: none;
+}
+
+span{
+    font-weight: bold;
+}
