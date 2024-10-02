@@ -1,0 +1,12 @@
+{
+  "name": "ejercicios-javascript",
+  "version": "2.0.0",
+  "description": "Varios ejercicios de javascript",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kristopher Alexis Verjel Rincón",
+  "license": "ISC"
+}

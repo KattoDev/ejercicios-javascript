@@ -1,4 +1,3 @@
-"use strict";
 const pages = [
     "../../src/pages/ejercicio1.html",
     "../../src/pages/ejercicio2.html",
@@ -35,11 +34,12 @@ const pages = [
     "../../src/pages/ejercicio33.html",
     "../../src/pages/ejercicio34.html",
     "../../src/pages/ejercicio35.html",
-];
+]
+
 /**
  * Executes a redirection to the exersice
  * @param exersice the number of the exersice
  */
-function gotoPage(exersice) {
-    window.location.href = pages[exersice - 1];
+function gotoPage(exersice:number): void {
+    window.location.href = pages[exersice-1];
 }

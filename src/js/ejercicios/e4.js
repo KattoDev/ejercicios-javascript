@@ -1,14 +1,17 @@
-const button = document.getElementById("comparar1");
+import { clearInput } from "../converted-ts/clear.js";
 
-button.onclick = () => {
-    let num = parseInt(document.getElementById("numc1").value);
-    let isPair = Boolean(!(num % 2))
+let numInput = document.getElementById("numc1");
 
-    if (!isPair){
-        alert("el número es impar")
+document.getElementById("comparar1").onclick = () => {
+    let num = parseInt(numInput.value);
+    let isPair = Boolean(!(num % 2));
+    let result = "impar";
+
+    if (!isPair) {
+        result = "par";
     }
-    else{
-        alert("el número es par")
-    }
 
-}
+    alert(`el número es ${result}`);
+
+    clearInput(numInput);
+};
