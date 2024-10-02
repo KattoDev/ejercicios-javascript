@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Ejercicio 1</title>
+    </head>
+    <body>
+        <header></header>
+        <main>
+            <div class="container hidden" id="ejercicio-2">
+                <blockquote>
+                    <p>
+                        Bien, ahora agreguemos Javascript a nuestro proyecto web. En
+                        nuestro archivo HTML vamos a vincular un fichero/archivo que
+                        se llame
+                    </p>
+                    <pre>script.js</pre>
+                    <p>
+                        (Este archivo debemos crearlo previamente). Recuerda que
+                        para vincular el fichero debemos hacerlo con la etiqueta
+                        script la cual debemos agregarla antes de que cierre la
+                        etiqueta body. Dentro del archivo script.js, vamos a
+                        declarar las variables nombre y apellido que habíamos
+                        declarado en la consola. Pero, esta vez deberemos asignarle
+                        el método
+                    </p>
+                    <pre>prompt()</pre>
+                    para que sea el usuario quien introduzca los datos, nombre y
+                    apellido. Mostrar una alerta de bienvenida a nuestra página
+                    con el nombre y el apellido del usuario
+                    <span>Bienvenido a nuestra página (nombre+apellido) </span>
+                </blockquote>
+                <div class="container">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="name" />
+                    </div>
+                    <div class="mb-3">
+                        <label for="surname" class="form-label">Apellido</label>
+                        <input type="text" class="form-control" id="surname" />
+                    </div>
+                    <button type="button" class="btn btn-success" id="saludar">
+                        Saludar
+                    </button>
+                </div>
+            </div>
+        </main>
+        <footer></footer>
+
+        <script src="../../src/js/ejercicios/e2.js"></script>
+        <script src="../../src/js/loadcomponents.js"></script>
+    </body>
+</html>
