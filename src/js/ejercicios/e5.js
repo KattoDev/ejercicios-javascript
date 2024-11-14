@@ -1,9 +1,11 @@
-const buttonConvert = document.getElementById("convertir");
+import { clearInput } from "../converted-ts/clear.js";
 
-buttonConvert.onclick = () => {
-    let celsius = parseInt(document.getElementById("celsius").value)
+let textInput = document.getElementById("text");
+document.getElementById("measure").onclick = () => {
+    let text = textInput.value;
 
-    let fahrenheit = ((celsius * (9/5)) +32);
+    let length = text.length;
 
-    alert(`${celsius}°C en fahrenheit son: ${fahrenheit}°F`)
-}
+    alert(`El largo del texto ingresado es: ${length}`);
+    clearInput(textInput);
+};

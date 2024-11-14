@@ -4,14 +4,14 @@ let numInput = document.getElementById("numc1");
 
 document.getElementById("comparar1").onclick = () => {
     let num = parseInt(numInput.value);
-    let isPair = Boolean(!(num % 2));
-    let result = "impar";
 
-    if (!isPair) {
-        result = "par";
+    if (!num) {
+        alert("Ingresa un numero valido");
+    } else {
+        let triple = 3 * num;
+
+        alert(`El triple de este número es: ${triple}`);
+
+        clearInput(numInput);
     }
-
-    alert(`el número es ${result}`);
-
-    clearInput(numInput);
 };
